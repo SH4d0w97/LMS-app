@@ -69,7 +69,8 @@ class ViewAnimalPageState extends State<ViewAnimalPage> {
               backgroundColor: Colors.black54,
               child: IconButton(
                 
-              ),            ),
+              ),
+            ),
           )
         ],
       )
