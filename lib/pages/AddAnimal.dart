@@ -31,8 +31,8 @@ class AddAnimalPage extends StatefulWidget {
 
 class AddAnimalPageState extends State<AddAnimalPage> {
   
-  void view(context){
-    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=> ViewAnimal()));
+  void displayAnimals(context){
+   Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>ViewAnimal()));
   }
 
   @override
@@ -81,7 +81,9 @@ class AddAnimalPageState extends State<AddAnimalPage> {
               children: [
                 MaterialButtonClass(buttonName: "Submit",
                   colr: Colors.black,fsize: 20,
-                  btnbg:Colors.white,funname: ()=> ({view(context)}),)
+                  btnbg:Colors.white,
+                  funname: ()=> ({displayAnimals(context)}),
+                ),
               ],
             ),
           ],

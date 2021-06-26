@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 
@@ -11,7 +10,9 @@ class ViewAnimal extends StatelessWidget {
       theme: ThemeData(
 
         brightness: Brightness.dark,
+
       ),
+      home: ViewAnimalPage(title: 'Animal Details'),
     );
   }
 }
@@ -27,6 +28,7 @@ class ViewAnimalPage extends StatefulWidget {
 
 class ViewAnimalPageState extends State<ViewAnimalPage> {
 
+
   @override
   Widget build(BuildContext context) {
 
@@ -35,44 +37,41 @@ class ViewAnimalPageState extends State<ViewAnimalPage> {
 
         title: Text(widget.title),
       ),
-      body: Stack(
-        alignment: Alignment.center,
-        children: [
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Padding(padding: EdgeInsets.all(20.0),
-                child: Text("Animal Details",style:
-                  TextStyle(
-                    fontSize: 30, letterSpacing: 1.5,
-                    color: Colors.white),
-                  ),
-                ),
-              Container(
-                padding: EdgeInsets.all(10.0),
-                width: MediaQuery.of(context).size.width/2,
-                height: MediaQuery.of(context).size.width/2,
-                decoration: BoxDecoration(
-                  border: Border.all(color: Colors.white, width:5),
-                  shape: BoxShape.circle,
-                  color: Colors.white,
-                  image: DecorationImage(
-                    fit: BoxFit.cover,
-                      image: AssetImage("assets/cattle.jpg"),
-                  ),
-                ),
-              ),
-            ],
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [Colors.black26, Colors.teal]
           ),
-          Padding(padding: EdgeInsets.only(bottom: 270, left: 184),
-            child: CircleAvatar(
-              backgroundColor: Colors.black54,
-              child: IconButton(
-                
-              ),
+        ),
+        width: double.infinity,
+        height: double.infinity,
+        child: Column(
+          children: [
+            SizedBox(height: 50,),
+            Container(
+              height: 120,
+              width: 120,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                    image: DecorationImage(
+                        image: AssetImage('images/cattle.jpg'),
+                        fit:BoxFit.cover
+                    ),
+        ),
+      ),
+            ListView(
+              padding: EdgeInsets.only(left: 50,right: 50,),
+              children: [
+                ListTile(title: Text("Animal ID"),),
+                ListTile(title: Text("Breed"),),
+                ListTile(title: Text("Color"),),
+                ListTile(title: Text("Type"),),
+              ],
             ),
-          )
-        ],
+      ]
+      ),
       )
 
     );
