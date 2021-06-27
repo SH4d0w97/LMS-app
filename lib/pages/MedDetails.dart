@@ -1,3 +1,4 @@
+import 'package:executiveapp/pages/AddMed.dart';
 import 'package:executiveapp/pages/ViewAnimalDetails.dart';
 import 'package:executiveapp/widget/dynamicListView.dart';
 import 'package:flutter/material.dart';
@@ -39,9 +40,9 @@ class MedDetailsPageState extends State<MedDetailsPage> {
     });
   }
 
-  void addMed(context) {
+  void addMedDetail(context) {
     Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (context) => null));
+        MaterialPageRoute(builder: (context) => AddMed()));
   }
 
   void back(context) {
@@ -79,8 +80,8 @@ class MedDetailsPageState extends State<MedDetailsPage> {
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add, color: Colors.white,),
         backgroundColor: Colors.black87,
-        onPressed: () => ({addDynamicList()}),
-        //onPressed: () => ({addFood(context)}),
+        //onPressed: () => ({addDynamicList()}),
+        onPressed: () => ({addMedDetail(context)}),
       ),
     );
   }
