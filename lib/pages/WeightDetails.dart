@@ -2,7 +2,7 @@ import 'package:executiveapp/pages/ViewAnimalDetails.dart';
 import 'package:executiveapp/widget/dynamicListView.dart';
 import 'package:flutter/material.dart';
 
-class FoodDetails extends StatelessWidget {
+class WeightDetails extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -12,27 +12,27 @@ class FoodDetails extends StatelessWidget {
       theme: ThemeData(
         brightness: Brightness.dark,
       ),
-      home: FoodDetailsPage(title: 'Food Details'),
+      home: WeightDetailsPage(title: 'Food Details'),
     );
   }
 
 }
 
-class FoodDetailsPage extends StatefulWidget {
-  FoodDetailsPage({Key key, this.title}) : super(key: key);
+class WeightDetailsPage extends StatefulWidget {
+  WeightDetailsPage({Key key, this.title}) : super(key: key);
 
   final String title;
 
   @override
-  FoodDetailsPageState createState() => FoodDetailsPageState();
+  WeightDetailsPageState createState() => WeightDetailsPageState();
 }
 
-class FoodDetailsPageState extends State<FoodDetailsPage> {
+class WeightDetailsPageState extends State<WeightDetailsPage> {
 
-  List<DynamicListFood> DynamiList = [];
+  List<DynamicListWeight> DynamiList = [];
 
   void addDynamicList() {
-    DynamiList.add(DynamicListFood());
+    DynamiList.add(DynamicListWeight());
 
     setState(() {
 
@@ -40,7 +40,7 @@ class FoodDetailsPageState extends State<FoodDetailsPage> {
 
   }
 
-  void addFood(context){
+  void addWeight(context){
     Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=> null));
   }
 

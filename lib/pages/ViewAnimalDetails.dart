@@ -1,4 +1,7 @@
 
+import 'package:executiveapp/pages/AddAnimal.dart';
+import 'package:executiveapp/pages/FoodDetails.dart';
+import 'package:executiveapp/pages/WeightDetails.dart';
 import 'package:executiveapp/widget/InputField.dart';
 import 'package:executiveapp/widget/MaterialButton1.dart';
 import 'package:flutter/material.dart';
@@ -58,24 +61,37 @@ class ViewAnimalPageState extends State<ViewAnimalPage> {
         ListTile(
           leading: Icon(Icons.fastfood),
           title: Text("Add Food Details"),
-          onTap: () => ({addFood()}) ,
+          onTap: () => ({food()}) ,
         ),
         ListTile(
           leading: Icon(Icons.workspaces_filled),
           title: Text("Add Weight Details"),
-          onTap: () => ({addFood()}) ,
+          onTap: () => ({weight()}) ,
         ),
         ListTile(
           leading: Icon(Icons.medical_services),
           title: Text("Add Medicine Details"),
-          onTap: () => ({addFood()}) ,
+          onTap: () => ({food()}) ,
         ),
       ],
     );
   }
 
-  void addFood(){
+
+  //FoodDetailsPage
+  void food(){
     Navigator.pop(context);
+    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>FoodDetails()));
+  }
+
+  void weight(){
+    Navigator.pop(context);
+    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>WeightDetails()));
+  }
+
+  //BackButton
+  void back(context){
+    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=> AddAnimal()));
   }
 
   @override
@@ -83,7 +99,7 @@ class ViewAnimalPageState extends State<ViewAnimalPage> {
 
     return Scaffold(
       appBar: AppBar(
-
+        leading: IconButton(icon:Icon(Icons.arrow_back_ios,), onPressed: () =>({back(context)}),),
         title: Text(widget.title),
       ),
       body: Container(

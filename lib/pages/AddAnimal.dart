@@ -56,6 +56,11 @@ class AddAnimalPageState extends State<AddAnimalPage> {
            Column(
              children:<Widget>[
                SizedBox(height: 80,),
+               Column(
+                 children: [
+                   IconTextField(label: "Animal ID",iname: Icons.account_circle,)
+                 ],
+               ),
             Column(
               children: [
                 IconTextField(label: "Breed",iname: Icons.merge_type,)
