@@ -79,7 +79,7 @@ class WeightDetailsPageState extends State<WeightDetailsPage> {
         child: Icon(Icons.add,color: Colors.white,),
         backgroundColor: Colors.black87,
         onPressed: () => ({addDynamicList()}),
-        //onPressed: () => ({addFood(context)}),
+        //onPressed: () => ({addWeight(context)}),
       ),
     );
   }
