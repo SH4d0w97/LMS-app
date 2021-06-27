@@ -2,7 +2,7 @@ import 'package:executiveapp/pages/ViewAnimalDetails.dart';
 import 'package:executiveapp/widget/dynamicListView.dart';
 import 'package:flutter/material.dart';
 
-class WeightDetails extends StatelessWidget {
+class MedDetails extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -12,47 +12,48 @@ class WeightDetails extends StatelessWidget {
       theme: ThemeData(
         brightness: Brightness.dark,
       ),
-      home: WeightDetailsPage(title: 'Weight Details'),
+      home: MedDetailsPage(title: 'Medicine Details'),
     );
   }
 
 }
 
-class WeightDetailsPage extends StatefulWidget {
-  WeightDetailsPage({Key key, this.title}) : super(key: key);
+class MedDetailsPage extends StatefulWidget {
+  MedDetailsPage({Key key, this.title}) : super(key: key);
 
   final String title;
 
   @override
-  WeightDetailsPageState createState() => WeightDetailsPageState();
+  MedDetailsPageState createState() => MedDetailsPageState();
 }
 
-class WeightDetailsPageState extends State<WeightDetailsPage> {
+class MedDetailsPageState extends State<MedDetailsPage> {
 
-  List<DynamicListWeight> DynamiList = [];
+  List<DynamicListMed> DynamiList = [];
 
   void addDynamicList() {
-    DynamiList.add(DynamicListWeight());
+    DynamiList.add(DynamicListMed());
 
     setState(() {
 
     });
-
   }
 
-  void addWeight(context){
-    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=> null));
+  void addMed(context) {
+    Navigator.of(context).pushReplacement(
+        MaterialPageRoute(builder: (context) => null));
   }
 
-  void back(context){
-    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=> ViewAnimal()));
+  void back(context) {
+    Navigator.of(context).pushReplacement(
+        MaterialPageRoute(builder: (context) => ViewAnimal()));
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(onPressed: ()=>({back(context)}),
+        leading: IconButton(onPressed: () => ({back(context)}),
             icon: Icon(Icons.arrow_back_ios)),
         title: Text(widget.title),
       ),
@@ -76,7 +77,7 @@ class WeightDetailsPageState extends State<WeightDetailsPage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add,color: Colors.white,),
+        child: Icon(Icons.add, color: Colors.white,),
         backgroundColor: Colors.black87,
         onPressed: () => ({addDynamicList()}),
         //onPressed: () => ({addFood(context)}),

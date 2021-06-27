@@ -1,6 +1,7 @@
 
 import 'package:executiveapp/pages/AddAnimal.dart';
 import 'package:executiveapp/pages/FoodDetails.dart';
+import 'package:executiveapp/pages/MedDetails.dart';
 import 'package:executiveapp/pages/WeightDetails.dart';
 import 'package:executiveapp/widget/InputField.dart';
 import 'package:executiveapp/widget/MaterialButton1.dart';
@@ -71,7 +72,7 @@ class ViewAnimalPageState extends State<ViewAnimalPage> {
         ListTile(
           leading: Icon(Icons.medical_services),
           title: Text("Add Medicine Details"),
-          onTap: () => ({food()}) ,
+          onTap: () => ({med()}) ,
         ),
       ],
     );
@@ -84,9 +85,16 @@ class ViewAnimalPageState extends State<ViewAnimalPage> {
     Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>FoodDetails()));
   }
 
+  //WeightDetails
   void weight(){
     Navigator.pop(context);
     Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>WeightDetails()));
+  }
+
+  //MedDetails
+  void med(){
+    Navigator.pop(context);
+    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>MedDetails()));
   }
 
   //BackButton
