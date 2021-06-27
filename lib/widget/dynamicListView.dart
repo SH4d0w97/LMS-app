@@ -7,8 +7,12 @@ class DynamicListFood extends StatelessWidget{
   Widget build(BuildContext context){
     return Container(
       child: Container(
-          color: Colors.black26,
-          padding: EdgeInsets.only(bottom:10,left: 10, right: 10),
+        decoration: BoxDecoration(
+          color: Colors.black54,
+          borderRadius: BorderRadius.all(Radius.circular(20)),
+        ),
+
+          padding: EdgeInsets.only(bottom:20,left: 10, right: 10),
           child: Column(
             children: [
               dTextField(hnt: "Animal ID",),
@@ -28,8 +32,11 @@ class DynamicListWeight extends StatelessWidget{
   Widget build(BuildContext context){
     return Container(
       child: Container(
-          color: Colors.black26,
-          padding: EdgeInsets.only(bottom:10,left: 10, right: 10),
+          decoration: BoxDecoration(
+            color: Colors.black54,
+            borderRadius: BorderRadius.all(Radius.circular(20)),
+          ),
+          padding: EdgeInsets.only(bottom:20,left: 10, right: 10),
           child: Column(
             children: [
               dTextField(hnt: "Animal ID",),
@@ -49,8 +56,11 @@ class DynamicListMed extends StatelessWidget{
   Widget build(BuildContext context){
     return Container(
       child: Container(
-          color: Colors.black26,
-          padding: EdgeInsets.only(bottom:10,left: 10, right: 10),
+          decoration: BoxDecoration(
+            color: Colors.black54,
+            borderRadius: BorderRadius.all(Radius.circular(20)),
+          ),
+          padding: EdgeInsets.only(bottom:20,left: 10, right: 10),
           child: Column(
             children: [
               dTextField(hnt: "Animal ID",),
