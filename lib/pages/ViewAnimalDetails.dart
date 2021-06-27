@@ -1,4 +1,4 @@
-import 'package:executiveapp/widget/IconTextField.dart';
+
 import 'package:executiveapp/widget/InputField.dart';
 import 'package:executiveapp/widget/MaterialButton1.dart';
 import 'package:flutter/material.dart';
@@ -36,15 +36,19 @@ class ViewAnimalPageState extends State<ViewAnimalPage> {
         context: context,
         builder: (context){
       return Container(
+        color: Colors.black26,
+        height: 180,
+        child: Container(
         child: builtBottomNavMenu(),
         decoration: BoxDecoration(
-          color: Colors.black54,
+          color: Colors.white12,
           borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(10),
-            topRight: Radius.circular(10),
+            topLeft: Radius.circular(20),
+            topRight: Radius.circular(20),
           ),
         ),
-      );
+      ),
+          );
     });
   }
 
@@ -57,13 +61,13 @@ class ViewAnimalPageState extends State<ViewAnimalPage> {
           onTap: () => ({addFood()}) ,
         ),
         ListTile(
-          leading: Icon(Icons.fastfood),
+          leading: Icon(Icons.workspaces_filled),
           title: Text("Add Weight Details"),
           onTap: () => ({addFood()}) ,
         ),
         ListTile(
-          leading: Icon(Icons.fastfood),
-          title: Text("Add Med Details"),
+          leading: Icon(Icons.medical_services),
+          title: Text("Add Medicine Details"),
           onTap: () => ({addFood()}) ,
         ),
       ],
