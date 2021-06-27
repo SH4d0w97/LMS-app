@@ -1,3 +1,6 @@
+import 'package:executiveapp/widget/IconTextField.dart';
+import 'package:executiveapp/widget/InputField.dart';
+import 'package:executiveapp/widget/MaterialButton1.dart';
 import 'package:flutter/material.dart';
 
 
@@ -28,6 +31,48 @@ class ViewAnimalPage extends StatefulWidget {
 
 class ViewAnimalPageState extends State<ViewAnimalPage> {
 
+  void _onButtonPressed(context){
+    showModalBottomSheet(
+        context: context,
+        builder: (context){
+      return Container(
+        child: builtBottomNavMenu(),
+        decoration: BoxDecoration(
+          color: Colors.black54,
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(10),
+            topRight: Radius.circular(10),
+          ),
+        ),
+      );
+    });
+  }
+
+  Column  builtBottomNavMenu() {
+    return Column(
+      children: [
+        ListTile(
+          leading: Icon(Icons.fastfood),
+          title: Text("Add Food Details"),
+          onTap: () => ({addFood()}) ,
+        ),
+        ListTile(
+          leading: Icon(Icons.fastfood),
+          title: Text("Add Weight Details"),
+          onTap: () => ({addFood()}) ,
+        ),
+        ListTile(
+          leading: Icon(Icons.fastfood),
+          title: Text("Add Med Details"),
+          onTap: () => ({addFood()}) ,
+        ),
+      ],
+    );
+  }
+
+  void addFood(){
+    Navigator.pop(context);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -61,18 +106,32 @@ class ViewAnimalPageState extends State<ViewAnimalPage> {
                     ),
         ),
       ),
-            ListView(
-              padding: EdgeInsets.only(left: 50,right: 50,),
-              children: [
-                ListTile(title: Text("Animal ID"),),
-                ListTile(title: Text("Breed"),),
-                ListTile(title: Text("Color"),),
-                ListTile(title: Text("Type"),),
-              ],
+            SizedBox(height: 20,),
+            Container(
+              width: 400,
+              height: 350,
+              child: ListView(
+                children: [
+                  ListTile(
+                    title: InputField(label: "Animal ID",obs: false,),
+                  ),
+                  ListTile(
+                    title: InputField(label: "Breed",obs: false,),
+                  ),
+                  ListTile(
+                    title: InputField(label: "Color",obs: false,),
+                  ),ListTile(
+                    title: InputField(label: "Type",obs: false,),
+                  ),
+                ],
+              ),
             ),
-      ]
+            MaterialButtonClass(buttonName: "More..",
+              colr: Colors.white,fsize: 20,
+              funname:()=> ({_onButtonPressed(context)}),)
+      ],
       ),
-      )
+      ),
 
     );
   }
