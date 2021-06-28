@@ -9,6 +9,7 @@ class AddFood extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
 
@@ -85,14 +86,15 @@ class AddFoodPageState extends State<AddFoodPage> {
             ),
             SizedBox(height: 115,),
             Container(
-              color: Colors.redAccent,
+
+              color: Colors.white,
               width: 500,
               child: MaterialButton(
                 child: Text("Submit",
                   style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.w500,
-                    color: Colors.white,
+                    color: Colors.black,
                   ),
                 ),
                 onPressed: () =>({view(context)}),

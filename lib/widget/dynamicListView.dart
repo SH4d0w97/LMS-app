@@ -123,3 +123,26 @@ class DynamicListOverdue extends StatelessWidget{
     );
   }
 }
+
+class DynamicListProduct extends StatelessWidget{
+  @override
+  Widget build(BuildContext context){
+    return Container(
+      child: Container(
+          decoration: BoxDecoration(
+            color: Colors.black54,
+            borderRadius: BorderRadius.all(Radius.circular(20)),
+          ),
+          padding: EdgeInsets.only(bottom:20,left: 10, right: 10),
+          child: Column(
+            children: [
+              dTextField(hnt: "Product Name",),
+              dTextField(hnt: "Date",),
+              dTextField(hnt: "Quantity",),
+            ],
+          ),
+          margin: EdgeInsets.only(left: 10, right: 10, bottom: 5,top: 5)
+      ),
+    );
+  }
+}

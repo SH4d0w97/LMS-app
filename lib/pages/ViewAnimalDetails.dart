@@ -14,6 +14,7 @@ class ViewAnimal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
 
@@ -61,13 +62,11 @@ class ViewAnimalPageState extends State<ViewAnimalPage> {
     return Column(
       children: [
         ListTile(
-          horizontalTitleGap: 20,
           leading: Icon(Icons.fastfood),
           title: Text("Add Food Details"),
           onTap: () => ({food()}) ,
         ),
         ListTile(
-          horizontalTitleGap: 20,
           leading: Icon(Icons.workspaces_filled),
           title: Text("Add Weight Details"),
           onTap: () => ({weight()}) ,

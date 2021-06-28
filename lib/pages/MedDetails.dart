@@ -54,7 +54,7 @@ class MedDetailsPageState extends State<MedDetailsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(onPressed: () => ({back(context)}),
+        leading: IconButton(onPressed: () => ({addMedDetail(context)}),
             icon: Icon(Icons.arrow_back_ios)),
         title: Text(widget.title),
       ),
@@ -80,8 +80,8 @@ class MedDetailsPageState extends State<MedDetailsPage> {
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add, color: Colors.white,),
         backgroundColor: Colors.black87,
-        //onPressed: () => ({addDynamicList()}),
-        onPressed: () => ({addMedDetail(context)}),
+        onPressed: () => ({addDynamicList()}),
+        //onPressed: () => ({addMedDetail(context)}),
       ),
     );
   }

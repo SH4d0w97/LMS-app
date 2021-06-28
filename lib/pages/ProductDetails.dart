@@ -1,9 +1,8 @@
-import 'package:executiveapp/pages/ViewAnimalDetails.dart';
 import 'package:executiveapp/pages/addWeight.dart';
 import 'package:executiveapp/widget/dynamicListView.dart';
 import 'package:flutter/material.dart';
 
-class WeightDetails extends StatelessWidget {
+class ProductDetails extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -13,27 +12,27 @@ class WeightDetails extends StatelessWidget {
       theme: ThemeData(
         brightness: Brightness.dark,
       ),
-      home: WeightDetailsPage(title: 'Weight Details'),
+      home: ProductDetailsPage(title: 'Weight Details'),
     );
   }
 
 }
 
-class WeightDetailsPage extends StatefulWidget {
-  WeightDetailsPage({Key key, this.title}) : super(key: key);
+class ProductDetailsPage extends StatefulWidget {
+  ProductDetailsPage({Key key, this.title}) : super(key: key);
 
   final String title;
 
   @override
-  WeightDetailsPageState createState() => WeightDetailsPageState();
+  ProductDetailsPageState createState() => ProductDetailsPageState();
 }
 
-class WeightDetailsPageState extends State<WeightDetailsPage> {
+class ProductDetailsPageState extends State<ProductDetailsPage> {
 
-  List<DynamicListWeight> DynamiList = [];
+  List<DynamicListProduct> DynamiList = [];
 
-  void addDynamicList() {
-    DynamiList.add(DynamicListWeight());
+  void addDynamicProduct() {
+    DynamiList.add(DynamicListProduct());
 
     setState(() {
 
@@ -41,19 +40,19 @@ class WeightDetailsPageState extends State<WeightDetailsPage> {
 
   }
 
-  void addWeight(context){
+  void addProduct(context){
     Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=> AddWeight()));
   }
 
   void back(context){
-    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=> ViewAnimal()));
+    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=> null));
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(onPressed: ()=>({addWeight(context)}),
+        leading: IconButton(onPressed: ()=>({addProduct(context)}),
             icon: Icon(Icons.arrow_back_ios)),
         title: Text(widget.title),
       ),
@@ -79,8 +78,7 @@ class WeightDetailsPageState extends State<WeightDetailsPage> {
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add,color: Colors.white,),
         backgroundColor: Colors.black87,
-        onPressed: () => ({addDynamicList()}),
-        //onPressed: () => ({addWeight(context)}),
+        onPressed: () => ({addDynamicProduct()}),
       ),
     );
   }

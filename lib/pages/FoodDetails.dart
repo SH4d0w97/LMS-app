@@ -1,4 +1,5 @@
 import 'package:executiveapp/pages/ViewAnimalDetails.dart';
+import 'package:executiveapp/pages/addFood.dart';
 import 'package:executiveapp/widget/dynamicListView.dart';
 import 'package:flutter/material.dart';
 
@@ -41,7 +42,7 @@ class FoodDetailsPageState extends State<FoodDetailsPage> {
   }
 
   void addFood(context){
-    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=> null));
+    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=> AddFood()));
   }
 
   void back(context){
@@ -52,7 +53,7 @@ class FoodDetailsPageState extends State<FoodDetailsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(onPressed: ()=>({back(context)}),
+        leading: IconButton(onPressed: ()=>({addFood(context)}),
             icon: Icon(Icons.arrow_back_ios)),
         title: Text(widget.title),
       ),
