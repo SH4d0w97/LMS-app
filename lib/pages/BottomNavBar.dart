@@ -1,5 +1,6 @@
 import 'package:executiveapp/pages/AddAnimal.dart';
 import 'package:executiveapp/pages/Home.dart';
+import 'package:executiveapp/pages/ViewJob.dart';
 import 'package:flutter/material.dart';
 
 
@@ -32,7 +33,7 @@ class BottomBarPageState extends State<BottomBarPage> {
 
   int selectedindex = 0;
 
-  final List<Widget> bod = [Home(),AddAnimal()];
+  final List<Widget> bod = [Home(),AddAnimal(),JobView()];
 
   void onTabTapped(int index)
   {

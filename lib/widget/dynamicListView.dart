@@ -74,3 +74,52 @@ class DynamicListMed extends StatelessWidget{
     );
   }
 }
+
+class DynamicListJob extends StatelessWidget{
+  @override
+  Widget build(BuildContext context){
+    return Container(
+      child: Container(
+          decoration: BoxDecoration(
+            color: Colors.black54,
+            borderRadius: BorderRadius.all(Radius.circular(20)),
+          ),
+          padding: EdgeInsets.only(bottom:20,left: 10, right: 10),
+          child: Column(
+            children: [
+              dTextField(hnt: "Job Description",),
+              dTextField(hnt: "Date Scheduled",),
+              dTextField(hnt: "Date Finished",),
+              dTextField(hnt: "Remark",),
+              dTextField(hnt: "Status",),
+              dTextField(hnt: "Job ID",),
+            ],
+          ),
+          margin: EdgeInsets.only(left: 10, right: 10, bottom: 5,top: 5)
+      ),
+    );
+  }
+}
+
+class DynamicListOverdue extends StatelessWidget{
+  @override
+  Widget build(BuildContext context){
+    return Container(
+      child: Container(
+          decoration: BoxDecoration(
+            color: Colors.black54,
+            borderRadius: BorderRadius.all(Radius.circular(20)),
+          ),
+          padding: EdgeInsets.only(bottom:20,left: 10, right: 10),
+          child: Column(
+            children: [
+              dTextField(hnt: "Job ID",),
+              dTextField(hnt: "Status",),
+              dTextField(hnt: "Remark",),
+            ],
+          ),
+          margin: EdgeInsets.only(left: 10, right: 10, bottom: 5,top: 5)
+      ),
+    );
+  }
+}
