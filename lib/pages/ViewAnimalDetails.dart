@@ -1,5 +1,6 @@
 
 import 'package:executiveapp/pages/AddAnimal.dart';
+import 'package:executiveapp/pages/AddProducts.dart';
 import 'package:executiveapp/pages/FoodDetails.dart';
 import 'package:executiveapp/pages/MedDetails.dart';
 import 'package:executiveapp/pages/WeightDetails.dart';
@@ -41,7 +42,7 @@ class ViewAnimalPageState extends State<ViewAnimalPage> {
         builder: (context){
       return Container(
         color: Colors.black26,
-        height: 180,
+        height: 250,
         child: Container(
         child: builtBottomNavMenu(),
         decoration: BoxDecoration(
@@ -60,11 +61,13 @@ class ViewAnimalPageState extends State<ViewAnimalPage> {
     return Column(
       children: [
         ListTile(
+          horizontalTitleGap: 20,
           leading: Icon(Icons.fastfood),
           title: Text("Add Food Details"),
           onTap: () => ({food()}) ,
         ),
         ListTile(
+          horizontalTitleGap: 20,
           leading: Icon(Icons.workspaces_filled),
           title: Text("Add Weight Details"),
           onTap: () => ({weight()}) ,
@@ -73,6 +76,11 @@ class ViewAnimalPageState extends State<ViewAnimalPage> {
           leading: Icon(Icons.medical_services),
           title: Text("Add Medicine Details"),
           onTap: () => ({med()}) ,
+        ),
+        ListTile(
+          leading: Icon(Icons.settings_input_composite_rounded),
+          title: Text("Add Product Details"),
+          onTap: () => ({product()}) ,
         ),
       ],
     );
@@ -95,6 +103,11 @@ class ViewAnimalPageState extends State<ViewAnimalPage> {
   void med(){
     Navigator.pop(context);
     Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>MedDetails()));
+  }
+
+  void product(){
+    Navigator.pop(context);
+    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>AddProduct()));
   }
 
   //BackButton
