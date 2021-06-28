@@ -1,3 +1,4 @@
+import 'package:executiveapp/pages/AddProducts.dart';
 import 'package:executiveapp/pages/addWeight.dart';
 import 'package:executiveapp/widget/dynamicListView.dart';
 import 'package:flutter/material.dart';
@@ -12,7 +13,7 @@ class ProductDetails extends StatelessWidget {
       theme: ThemeData(
         brightness: Brightness.dark,
       ),
-      home: ProductDetailsPage(title: 'Weight Details'),
+      home: ProductDetailsPage(title: 'Product Details'),
     );
   }
 
@@ -41,7 +42,7 @@ class ProductDetailsPageState extends State<ProductDetailsPage> {
   }
 
   void addProduct(context){
-    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=> AddWeight()));
+    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=> AddProduct()));
   }
 
   void back(context){

@@ -1,3 +1,4 @@
+import 'package:executiveapp/pages/ProductDetails.dart';
 import 'package:executiveapp/pages/ViewAnimalDetails.dart';
 import 'package:executiveapp/widget/IconTextField.dart';
 import 'package:flutter/cupertino.dart';
@@ -34,7 +35,7 @@ class AddProductPageState extends State<AddProductPage> {
 
 
   void back(context){
-    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=> ViewAnimal()));
+    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=> ProductDetails()));
   }
 
   @override
