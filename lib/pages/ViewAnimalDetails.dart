@@ -3,6 +3,7 @@ import 'package:executiveapp/pages/AddAnimal.dart';
 import 'package:executiveapp/pages/AddProducts.dart';
 import 'package:executiveapp/pages/FoodDetails.dart';
 import 'package:executiveapp/pages/MedDetails.dart';
+import 'package:executiveapp/pages/ProductDetails.dart';
 import 'package:executiveapp/pages/WeightDetails.dart';
 import 'package:executiveapp/widget/InputField.dart';
 import 'package:executiveapp/widget/MaterialButton1.dart';
@@ -106,7 +107,7 @@ class ViewAnimalPageState extends State<ViewAnimalPage> {
 
   void product(){
     Navigator.pop(context);
-    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>AddProduct()));
+    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>ProductDetails()));
   }
 
   //BackButton
