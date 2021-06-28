@@ -115,7 +115,21 @@ class JobViewPageState extends State<JobViewPage> {
                       itemCount: DynamiList1.length,
                       itemBuilder: (_, index) => DynamiList1[index]),
                 ),
-                MaterialButtonClass(buttonName: "Submit",funname: ()=>(addDynamicOverdue()),),
+                Container(
+                  color: Colors.white,
+                  width: 500,
+                  child: MaterialButton(
+                    child: Text(
+                      "Update",
+                      style: TextStyle(
+                        fontSize: 17,
+                        fontWeight: FontWeight.w900,
+                        color: Colors.black,
+                      ),
+                    ),
+                    onPressed: () =>({addDynamicOverdue()}),
+                  ),
+                ),
               ],
             ),
           ),
