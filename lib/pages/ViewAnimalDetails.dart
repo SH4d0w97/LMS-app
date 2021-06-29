@@ -1,6 +1,5 @@
 
 import 'package:executiveapp/pages/AddAnimal.dart';
-import 'package:executiveapp/pages/AddProducts.dart';
 import 'package:executiveapp/pages/FoodDetails.dart';
 import 'package:executiveapp/pages/MedDetails.dart';
 import 'package:executiveapp/pages/ProductDetails.dart';
@@ -120,7 +119,9 @@ class ViewAnimalPageState extends State<ViewAnimalPage> {
 
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(icon:Icon(Icons.arrow_back_ios,), onPressed: () =>({back(context)}),),
+        leading: IconButton(icon:Icon(Icons.arrow_back_ios,),
+          onPressed: () =>({back(context)}),
+        ),
         title: Text(widget.title),
       ),
       body: Container(

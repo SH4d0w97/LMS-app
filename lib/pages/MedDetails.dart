@@ -30,10 +30,10 @@ class MedDetailsPage extends StatefulWidget {
 
 class MedDetailsPageState extends State<MedDetailsPage> {
 
-  List<DynamicListMed> DynamiList = [];
+  List<DynamicListMed> DynamicList = [];
 
   void addDynamicList() {
-    DynamiList.add(DynamicListMed());
+    DynamicList.add(DynamicListMed());
 
     setState(() {
 
@@ -70,8 +70,8 @@ class MedDetailsPageState extends State<MedDetailsPage> {
           children: [
             Flexible(
                 child: ListView.builder(
-                    itemCount: DynamiList.length,
-                    itemBuilder: (_, index) => DynamiList[index])
+                    itemCount: DynamicList.length,
+                    itemBuilder: (_, index) => DynamicList[index])
             ),
 
           ],
